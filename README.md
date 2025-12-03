@@ -34,36 +34,19 @@ cd build
 ./tests
 ```
 
-## Running the Application
-
-```bash
-cd build
-./ringbuffer_app
-```
-
 ## Project Structure
 
 ```
 ringbuffer/
-├── CMakeLists.txt          # Build configuration
+├── CMakeLists.txt          
 ├── include/
 │   └── ringbuffer/
-│       └── ring_buffer.hpp # Header interface
+│       └── ring_buffer.hpp 
 ├── src/
-│   └── ring_buffer.cpp     # Implementation
+│   └── ring_buffer.cpp     
 ├── app/
-│   └── main.cpp            # Main application
+│   └── main.cpp            
 ├── tests/
-│   └── test_ring_buffer.cpp # Google Test suite
-└── build/                   # Build artifacts (gitignored)
+│   └── test_ring_buffer.cpp 
+└── build/                   
 ```
-
-
-## TODO
-
-- [ ] Implement constructor
-- [ ] Implement push/pop operations
-- [ ] Implement front/back accessors
-- [ ] Handle wrap-around logic
-- [ ] Add exception handling for edge cases
-- [ ] Complete test suite
