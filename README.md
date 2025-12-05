@@ -16,15 +16,15 @@ The point of a ring buffer is to manage memory as efficiently as possible. The d
 ### Time and Space Complexity
 | Operation | Average Case | Worst Case |
 |-----------|--------------|------------|
-| Insert | O(1) | O(1) |
+| push | O(1) | O(1) |
 | Search | n/a | n/a |
-| Delete | O(1) | O(1) |
+| pop | O(1) | O(1) |
 
 ## File Structure
 
 I took the lead from previous assignments, online guides, and VS Code extensions on the project structure. 
 
-/include/<header_file.hpp> was probably the new idea. Also, putting all the code in the header file instead of a skeleton definition was different as well.
+/include/<header_file.hpp> was probably the new idea. Also, putting all the code in the header file instead of a skeleton definition then the implementation details going into a .cpp file.
 
 ```
 ringbuffer/
@@ -88,4 +88,4 @@ https://learn.microsoft.com/en-us/visualstudio/test/how-to-use-google-test-for-c
 
 ### Future Improvements
 
-On reading about ring buffers, I learned every tiny corner of the buffer could be modified and expanded. This buffer simply handles integers. But the Array slots themselves could be modified to handle data different types of data. The slots could have hard limits on the bits allowed in the slot. The buffer slots could then hold portions of data, requiring popping multiple slots for decoding and full item at a time. This would make sense for extremely large video files, for example. 
+On reading about ring buffers, I learned every tiny corner of the buffer could be modified and expanded. This buffer simply handles integers. But the Array slots themselves could be modified to handle data different types of data. The slots could have hard limits on the bits allowed in the slot. The buffer slots could then hold portions of data, requiring popping multiple slots for decoding and full item at a time. This would make sense for extremely large video files, for example.
